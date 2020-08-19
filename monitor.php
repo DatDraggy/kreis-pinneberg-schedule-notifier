@@ -6,8 +6,7 @@ $html = file_get_html($config['url']);
 $dates = $html->find('.date-list .date');
 
 if (empty($dates)) {
-  $notification = 'No Datelist found! Check URL!';
-  die($notification);
+  die('No Datelist found! Check URL!');
 }
 
 $notification = '';
@@ -16,7 +15,7 @@ foreach ($dates as $date) {
   if (empty($date->find('.no-available'))) {
     $notification .= "\n" . $date->find('span[class=text]', 0)->innertext . "\n";
     foreach ($date->find('ul[class=times-list] a') as $time) {
-      $times = trim($time->innertext);
+      $times[] = trim($time->innertext);
     }
     $notification .= implode(', ', $times);
   }
