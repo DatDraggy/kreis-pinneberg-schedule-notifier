@@ -8,6 +8,6 @@ Definitely not perfect, it kinda spams you, but at least that way you won't miss
 ### Installation
 - Download the [Simple HTML Dom](https://simplehtmldom.sourceforge.io/) Library
 - Put it in a dir called simple_html_dom
-- Edit `config.php`
+- Copy `config.example.php` to `config.php` and edit
 - Run `php monitor.php`, some times should pop up
 - Put it in a cronjob and make sure that Cron sends job outputs to an email 
