@@ -3,6 +3,8 @@ I needed an appointment at the Straßenverkehrsamt of Pinneberg.
 Because all times in the next couple of days were taken, I've decided to write a script that notifies me when a person cancels their appointment.
 It's a quite specific usecase, but I thought why not put it on github.
 
+Definitely not perfect, it kinda spams you, but at least that way you won't miss a date...
+
 ### Installation
 - Download the [Simple HTML Dom](https://simplehtmldom.sourceforge.io/) Library
 - Put it in a dir called simple_html_dom
