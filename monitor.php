@@ -3,6 +3,10 @@ require_once('simple_html_dom/simple_html_dom.php');
 require_once('config.php');
 $html = file_get_html($config['url']);
 
+if ($html === false) {
+  die();
+}
+
 $dates = $html->find('.date-list .date');
 
 if (empty($dates)) {
