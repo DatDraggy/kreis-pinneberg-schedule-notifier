@@ -16,8 +16,8 @@ if (empty($dates)) {
 $notification = '';
 
 foreach ($dates as $date) {
-  if (empty($date->find('.no-available'))) {
-    $notification .= "\n" . $date->find('span[class=text]', 0)->innertext . "\n";
+  if (empty($date->find('.not-available'))) {
+    $notification .= "\n" . $date->find('span', 0)->innertext . "\n";
     $times = [];
     foreach ($date->find('ul[class=times-list] a') as $time) {
       $times[] = trim($time->innertext);
@@ -25,7 +25,7 @@ foreach ($dates as $date) {
     $notification .= implode(', ', $times);
   }
 
-  if (!empty($config['datesUntil']) && $date->find('span[class=text]', 0)->innertext === $config['datesUntil']) {
+  if (!empty($config['datesUntil']) && $date->find('span', 0)->innertext === $config['datesUntil']) {
     break;
   }
 }
